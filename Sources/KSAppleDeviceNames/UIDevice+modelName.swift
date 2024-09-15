@@ -165,6 +165,7 @@ public extension UIDevice {
                 case "Watch6,18":                                           return "Apple Watch Ultra"
                 case "Watch7,1", "Watch7,2", "Watch7,3", "Watch7,4":        return "Apple Watch Series 9"
                 case "Watch7,5":                                            return "Apple Watch Ultra 2"
+                case "Watch7,8", "Watch7,9", "Watch7,10", "Watch7,11":      return "Apple Watch Series 10"
                     
                 case "i386", "x86_64", "arm64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
                 default:    return identifier
