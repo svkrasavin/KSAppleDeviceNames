@@ -144,10 +144,6 @@ public extension UIDevice {
                 case "AppleTV1,1":                  return "Apple TV 1"
                 case "AppleTV2,1":                  return "Apple TV 2"
                 case "AppleTV3,1", "AppleTV3,2":    return "Apple TV 3"
-                case "AppleTV5,3":                  return "Apple TV 4"
-                case "AppleTV6,2":                  return "Apple TV 4K"
-                case "AppleTV11,1":                 return "Apple TV 4K 2"
-                case "AppleTV14,1":                 return "Apple TV 4K 3"
                     
                 case "AudioAccessory1,1":   return "HomePod"
                 case "AudioAccessory5,1":   return "HomePod mini"
@@ -174,8 +170,10 @@ public extension UIDevice {
 #elseif os(tvOS)
             switch identifier {
                     
-                case "AppleTV5,3": return "Apple TV 4"
-                case "AppleTV6,2": return "Apple TV 4K"
+                case "AppleTV5,3":      return "Apple TV 4"
+                case "AppleTV6,2":      return "Apple TV 4K"
+                case "AppleTV11,1":     return "Apple TV 4K 2"
+                case "AppleTV14,1":     return "Apple TV 4K 3"
                     
                 case "i386", "x86_64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "tvOS"))"
                 default: return identifier
