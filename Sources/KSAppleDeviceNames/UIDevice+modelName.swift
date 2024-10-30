@@ -125,6 +125,7 @@ public extension UIDevice {
                 case "iPad5,1", "iPad5,2":                              return "iPad mini 4"
                 case "iPad11,1", "iPad11,2":                            return "iPad mini 5"
                 case "iPad14,1", "iPad14,2":                            return "iPad mini 6"
+                case "iPad16,1", "iPad16,2":                            return "iPad mini (A17 Pro)"
                     
                 case "iPad6,3", "iPad6,4":                              return "iPad Pro (9.7-inch)"
                 case "iPad7,3", "iPad7,4":                              return "iPad Pro (10.5-inch)"
