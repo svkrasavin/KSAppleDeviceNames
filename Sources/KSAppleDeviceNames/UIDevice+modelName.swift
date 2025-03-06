@@ -99,6 +99,7 @@ public extension UIDevice {
                 case "iPhone17,4":                          return "iPhone 16 Plus"
                 case "iPhone17,1":                          return "iPhone 16 Pro"
                 case "iPhone17,2":                          return "iPhone 16 Pro Max"
+                case "iPhone17,5":                          return "iPhone 16e"
                     
                 case "iPad1,1":                                         return "iPad"
                 case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":        return "iPad 2"
@@ -110,6 +111,7 @@ public extension UIDevice {
                 case "iPad11,6", "iPad11,7":                            return "iPad 8"
                 case "iPad12,1", "iPad12,2":                            return "iPad 9"
                 case "iPad13,18", "iPad13,19":                          return "iPad 10"
+                case "iPad15,7", "iPad15,8":                            return "iPad (A16)"
                     
                 case "iPad4,1", "iPad4,2", "iPad4,3":                   return "iPad Air"
                 case "iPad5,3", "iPad5,4":                              return "iPad Air 2"
@@ -117,7 +119,9 @@ public extension UIDevice {
                 case "iPad13,1", "iPad13,2":                            return "iPad Air 4"
                 case "iPad13,16", "iPad13,17":                          return "iPad Air 5"
                 case "iPad14,8", "iPad14,9":                            return "iPad Air 11-inch (M2)"
+                case "iPad15,3", "iPad15,4":                            return "iPad Air 11-inch (M3)"
                 case "iPad14,10", "iPad14,11":                          return "iPad Air 13-inch (M2)"
+                case "iPad15,5", "iPad15,6":                            return "iPad Air 13-inch (M3)"
                     
                 case "iPad2,5", "iPad2,6", "iPad2,7":                   return "iPad mini"
                 case "iPad4,4", "iPad4,5", "iPad4,6":                   return "iPad mini 2"
