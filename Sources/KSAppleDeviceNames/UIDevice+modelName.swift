@@ -100,6 +100,10 @@ public extension UIDevice {
                 case "iPhone17,1":                          return "iPhone 16 Pro"
                 case "iPhone17,2":                          return "iPhone 16 Pro Max"
                 case "iPhone17,5":                          return "iPhone 16e"
+                case "iPhone18,1":                          return "iPhone 17 Pro"
+                case "iPhone18,2":                          return "iPhone 17 Pro Max"
+                case "iPhone18,3":                          return "iPhone 17"
+                case "iPhone18,4":                          return "iPhone Air"
                     
                 case "iPad1,1":                                         return "iPad"
                 case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":        return "iPad 2"
