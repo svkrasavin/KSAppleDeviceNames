@@ -104,6 +104,7 @@ public extension UIDevice {
                 case "iPhone18,2":                          return "iPhone 17 Pro Max"
                 case "iPhone18,3":                          return "iPhone 17"
                 case "iPhone18,4":                          return "iPhone Air"
+                case "iPhone18,5":                          return "iPhone 17e"
                     
                 case "iPad1,1":                                         return "iPad"
                 case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":        return "iPad 2"
@@ -124,8 +125,10 @@ public extension UIDevice {
                 case "iPad13,16", "iPad13,17":                          return "iPad Air 5"
                 case "iPad14,8", "iPad14,9":                            return "iPad Air 11-inch (M2)"
                 case "iPad15,3", "iPad15,4":                            return "iPad Air 11-inch (M3)"
+                case "iPad16,8", "iPad16,9":                            return "iPad Air 11-inch (M4)"
                 case "iPad14,10", "iPad14,11":                          return "iPad Air 13-inch (M2)"
                 case "iPad15,5", "iPad15,6":                            return "iPad Air 13-inch (M3)"
+                case "iPad16,10", "iPad16,11":                          return "iPad Air 13-inch (M4)"
                     
                 case "iPad2,5", "iPad2,6", "iPad2,7":                   return "iPad mini"
                 case "iPad4,4", "iPad4,5", "iPad4,6":                   return "iPad mini 2"
