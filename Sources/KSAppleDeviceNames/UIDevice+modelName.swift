@@ -28,8 +28,11 @@
 //  SOFTWARE.
 
 import SystemConfiguration
+#if canImport(UIKit)
 import UIKit
+#endif
 
+#if canImport(UIKit)
 public extension UIDevice {
     
     /// The name of the Apple device model
@@ -105,6 +108,9 @@ public extension UIDevice {
                 case "iPhone18,3":                          return "iPhone 17"
                 case "iPhone18,4":                          return "iPhone Air"
                 case "iPhone18,5":                          return "iPhone 17e"
+                case "iPhone19,2":                          return "iPhone 18 Pro"
+                case "iPhone19,3", "iPhone19,7":            return "iPhone 18 Pro Max"
+                case "iPhone19,4":                          return "iPhone Duo"
                     
                 case "iPad1,1":                                         return "iPad"
                 case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":        return "iPad 2"
@@ -180,6 +186,8 @@ public extension UIDevice {
                 case "Watch7,12":                                           return "Apple Watch Ultra 3"
                 case "Watch7,17", "Watch7,18", "Watch7,19", "Watch7,20":    return "Apple Watch Series 11"
                 case "Watch7,13", "Watch7,14", "Watch7,15", "Watch7,16":    return "Apple Watch SE 3"
+                case "Watch8,2", "Watch8,3", "Watch8,4", "Watch8,5":        return "Apple Watch Series 12"
+                case "Watch8,1":                                            return "Apple Watch Ultra 4"
                     
                 case "i386", "x86_64", "arm64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
                 default:    return identifier
@@ -202,3 +210,5 @@ public extension UIDevice {
     }()
     
 }
+
+#endif
