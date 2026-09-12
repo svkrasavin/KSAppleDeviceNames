@@ -27,9 +27,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import SystemConfiguration
+#if canImport(UIKit)
 import UIKit
+#endif
 
+#if canImport(UIKit)
 public extension UIDevice {
     
     /// The name of the Apple device model
@@ -45,13 +47,6 @@ public extension UIDevice {
         func mapToDevice(identifier: String) -> String {
 #if os(iOS)
             switch identifier {
-                case "iPod1,1": return "iPod touch"
-                case "iPod2,1": return "iPod touch 2"
-                case "iPod3,1": return "iPod touch 3"
-                case "iPod4,1": return "iPod touch 4"
-                case "iPod5,1": return "iPod touch 5"
-                case "iPod7,1": return "iPod touch 6"
-                case "iPod9,1": return "iPod touch 7"
                     
                 case "iPhone1,1":                           return "iPhone"
                 case "iPhone1,2":                           return "iPhone 3G"
@@ -105,6 +100,9 @@ public extension UIDevice {
                 case "iPhone18,3":                          return "iPhone 17"
                 case "iPhone18,4":                          return "iPhone Air"
                 case "iPhone18,5":                          return "iPhone 17e"
+                case "iPhone19,2":                          return "iPhone 18 Pro"
+                case "iPhone19,3", "iPhone19,7":            return "iPhone 18 Pro Max"
+                case "iPhone19,4":                          return "iPhone Duo"
                     
                 case "iPad1,1":                                         return "iPad"
                 case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":        return "iPad 2"
@@ -159,28 +157,6 @@ public extension UIDevice {
                 case "AppleTV2,1":                  return "Apple TV 2"
                 case "AppleTV3,1", "AppleTV3,2":    return "Apple TV 3"
                     
-                case "AudioAccessory1,1":   return "HomePod"
-                case "AudioAccessory5,1":   return "HomePod mini"
-                    
-                case "Watch1,1", "Watch1,2":                                return "Apple Watch"
-                case "Watch2,6", "Watch2,7":                                return "Apple Watch Series 1"
-                case "Watch2,3", "Watch2,4":                                return "Apple Watch Series 2"
-                case "Watch3,1", "Watch3,2", "Watch3,3", "Watch3,4":        return "Apple Watch Series 3"
-                case "Watch4,1", "Watch4,2", "Watch4,3", "Watch4,4":        return "Apple Watch Series 4"
-                case "Watch5,1", "Watch5,2", "Watch5,3", "Watch5,4":        return "Apple Watch Series 5"
-                case "Watch5,9", "Watch5,10", "Watch5,11", "Watch5,12":     return "Apple Watch SE"
-                case "Watch6,1", "Watch6,2", "Watch6,3", "Watch6,4":        return "Apple Watch Series 6"
-                case "Watch6,6", "Watch6,7", "Watch6,8", "Watch6,9":        return "Apple Watch Series 7"
-                case "Watch6,10", "Watch6,11", "Watch6,12", "Watch6,13":    return "Apple Watch SE 2"
-                case "Watch6,14", "Watch6,15", "Watch6,16", "Watch6,17":    return "Apple Watch Series 8"
-                case "Watch6,18":                                           return "Apple Watch Ultra"
-                case "Watch7,1", "Watch7,2", "Watch7,3", "Watch7,4":        return "Apple Watch Series 9"
-                case "Watch7,5":                                            return "Apple Watch Ultra 2"
-                case "Watch7,8", "Watch7,9", "Watch7,10", "Watch7,11":      return "Apple Watch Series 10"
-                case "Watch7,12":                                           return "Apple Watch Ultra 3"
-                case "Watch7,17", "Watch7,18", "Watch7,19", "Watch7,20":    return "Apple Watch Series 11"
-                case "Watch7,13", "Watch7,14", "Watch7,15", "Watch7,16":    return "Apple Watch SE 3"
-                    
                 case "i386", "x86_64", "arm64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
                 default:    return identifier
             }
@@ -202,3 +178,6 @@ public extension UIDevice {
     }()
     
 }
+
+#endif
+
