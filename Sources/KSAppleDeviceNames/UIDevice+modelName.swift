@@ -170,7 +170,7 @@ public extension UIDevice {
                 case "AppleTV14,1":     return "Apple TV 4K 3"
                 case "AppleTV18,1":     return "Apple TV 4K 4"
                     
-                case "i386", "x86_64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "tvOS"))"
+                case "i386", "x86_64", "arm64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "tvOS"))"
                 default: return identifier
             }
 #endif
